@@ -21,6 +21,9 @@ call plug#end()
 
 " Start of command section
 
+  " Makes clipboard the default register
+  set clipboard=unnamed
+
   " Makes numbers appear on side of screen
   set number
 
@@ -53,6 +56,6 @@ call plug#end()
   noremap <C-c> "*y
 
   " Paste
-  noremap <C-p> "*p
+  noremap <C-p> p
 
 " End of aliases section
