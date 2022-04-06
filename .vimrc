@@ -53,9 +53,9 @@ call plug#end()
   noremap <C-a> ggVG
 
   " Copy
-  noremap <C-c> "*y
+  noremap <C-c> "+y
 
   " Paste
-  noremap <C-p> p
+  noremap <C-p> "+p
 
 " End of aliases section
