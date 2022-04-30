@@ -58,4 +58,4 @@ call plug#end()
   " Paste
   noremap <C-p> "+p
 
-" End of aliases section
+" End of aliases sectio
