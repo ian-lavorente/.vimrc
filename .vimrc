@@ -10,9 +10,6 @@ call plug#begin()
   " VSCode-like Auto Comment
   Plug 'preservim/nerdcommenter'
 
-  " VSCode-like sidebar
-  Plug 'preservim/nerdtree'
-
   " Language support
   Plug 'sheerun/vim-polyglot'
 
@@ -30,6 +27,9 @@ call plug#end()
   " Makes lightline.vim work
   set laststatus=2
 
+  " Makes nerdcommenter work
+  filetype plugin on
+
   " Makes vim-polyglot work
   set nocompatible
 
@@ -38,13 +38,6 @@ call plug#end()
      \ 'colorscheme': 'wombat',
      \ }
 
-  " Makes NERDTree start when Vim is started without file arguments.
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-
-  " Makes Vim close if NERDTree is the only window remaining in the only tab.
-  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
 " End of command section
 
 " Start of aliases section
@@ -52,10 +45,16 @@ call plug#end()
   " Select all
   noremap <C-a> ggVG
 
+  " Cut
+  noremap <C-x> d
+
   " Copy
   noremap <C-c> "+y
 
   " Paste
-  noremap <C-p> "+p
+  noremap <C-v> "+p
+
+  " Comment
+  noremap <C-_> <leader>cc
 
 " End of aliases section
