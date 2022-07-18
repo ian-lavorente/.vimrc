@@ -63,5 +63,11 @@ call plug#end()
 
   " Paste
   noremap <C-v> "+p
+  
+  " Move line up
+  noremap <C-S-k> ddkP
+  
+  " Move line down
+  noremap <C-S-j> ddp
 
 " End of aliases section
